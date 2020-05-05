@@ -9,7 +9,7 @@ Jogo de perguntas e "respostas livres"
 
 ### Demonstração (PT-BR)
 
-![](exemplo1.mp4)
+![Demo](exemplo1.gif)
 
 ----------
 
