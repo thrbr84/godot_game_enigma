@@ -11,7 +11,10 @@ Game of questions and "free answers"
 
 ![Demo](exemplo1.gif)
 
+----------
+
 - https://www.youtube.com/watch?v=h4rk4VNmryw (PT-BR)
+
 [![Video com a explicação](https://img.youtube.com/vi/h4rk4VNmryw/0.jpg)](https://www.youtube.com/watch?v=h4rk4VNmryw)
 
 ----------
