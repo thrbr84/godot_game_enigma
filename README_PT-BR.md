@@ -11,6 +11,10 @@ Jogo de perguntas e "respostas livres"
 
 ![Demo](exemplo1.gif)
 
+
+- https://www.youtube.com/watch?v=h4rk4VNmryw
+[![Video com a explicação](https://img.youtube.com/vi/h4rk4VNmryw/0.jpg)](https://www.youtube.com/watch?v=h4rk4VNmryw)
+
 ----------
 
 ##### Configuração
