@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/time_left.ogg-afb655ab7df11834de78e82249d8c618.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/time_left.ogg"
+dest_files=[ "res://.import/time_left.ogg-afb655ab7df11834de78e82249d8c618.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

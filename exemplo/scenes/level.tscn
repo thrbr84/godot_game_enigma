@@ -1,0 +1,394 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://assets/background_level.jpg" type="Texture" id=1]
+[ext_resource path="res://assets/fonts/PoetsenOne-Regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://assets/button/close.png" type="Texture" id=3]
+[ext_resource path="res://assets/enigmas/1.jpg" type="Texture" id=4]
+[ext_resource path="res://assets/correct.png" type="Texture" id=5]
+[ext_resource path="res://assets/incorrect.png" type="Texture" id=6]
+[ext_resource path="res://scripts/level.gd" type="Script" id=7]
+[ext_resource path="res://assets/button/blank.png" type="Texture" id=8]
+[ext_resource path="res://assets/button/next.png" type="Texture" id=9]
+
+[sub_resource type="Animation" id=1]
+resource_name = "correct"
+tracks/0/type = "value"
+tracks/0/path = NodePath("resposta:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 5 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("resposta:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.0470588, 0.207843, 0.0196078, 0.65098 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("../Control:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("../CanvasLayer/nextLevelInfo:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "incorrect"
+tracks/0/type = "value"
+tracks/0/path = NodePath("resposta:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 6 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("resposta:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.282353, 0, 0, 0.643137 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("../CanvasLayer/nextLevelInfo:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("../Control:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "start"
+tracks/0/type = "value"
+tracks/0/path = NodePath("resposta:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ null ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("resposta:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("../Control:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.6, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("../CanvasLayer/nextLevelInfo:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("../Control:rect_position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 30, 576 ), Vector2( 30, 256 ) ]
+}
+
+[sub_resource type="DynamicFont" id=4]
+size = 45
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 30
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 45
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 45
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=8]
+size = 30
+font_data = ExtResource( 2 )
+
+[node name="level" type="Node2D"]
+script = ExtResource( 7 )
+
+[node name="background" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+centered = false
+
+[node name="enigma" type="TextureRect" parent="."]
+margin_top = 560.0
+margin_right = 720.0
+margin_bottom = 1280.0
+texture = ExtResource( 4 )
+expand = true
+stretch_mode = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="resposta" type="Sprite" parent="enigma"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 360, 360 )
+texture = ExtResource( 6 )
+
+[node name="anim" type="AnimationPlayer" parent="enigma"]
+anims/correct = SubResource( 1 )
+anims/incorrect = SubResource( 2 )
+anims/start = SubResource( 3 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer"]
+anchor_right = 1.0
+margin_left = 31.0
+margin_top = 30.0
+margin_right = -31.0
+margin_bottom = 90.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="placar" type="Control" parent="CanvasLayer/HBoxContainer"]
+margin_right = 560.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 560, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="level" type="Label" parent="CanvasLayer/HBoxContainer/placar"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 4 )
+text = "Level: 1"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="pontos" type="Label" parent="CanvasLayer/HBoxContainer/placar"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 58.0
+margin_bottom = 58.0
+custom_fonts/font = SubResource( 5 )
+text = "Pontos: 0"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="close" type="Control" parent="CanvasLayer/HBoxContainer"]
+margin_left = 564.0
+margin_right = 664.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 100, 60 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="close" type="TouchScreenButton" parent="CanvasLayer/HBoxContainer/close"]
+modulate = Color( 1, 0.176471, 0, 1 )
+position = Vector2( 40, 8 )
+normal = ExtResource( 3 )
+
+[node name="nextLevelInfo" type="Label" parent="CanvasLayer"]
+modulate = Color( 1, 1, 1, 0 )
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -360.0
+margin_top = -1035.0
+margin_right = 360.0
+margin_bottom = -912.0
+custom_fonts/font = SubResource( 6 )
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="Control" type="Control" parent="."]
+margin_left = 30.0
+margin_top = 256.0
+margin_right = 690.0
+margin_bottom = 356.0
+rect_min_size = Vector2( 660, 100 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="resposta" type="LineEdit" parent="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -130.0
+margin_bottom = -6.10352e-05
+custom_fonts/font = SubResource( 7 )
+align = 1
+placeholder_text = "Digite sua resposta..."
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="btnCheck" type="TouchScreenButton" parent="Control"]
+position = Vector2( 514.323, -15.9286 )
+scale = Vector2( 0.500023, 0.500023 )
+normal = ExtResource( 9 )
+
+[node name="pularLabel" type="Label" parent="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 139.801
+margin_right = 6.10352e-05
+margin_bottom = 139.801
+custom_fonts/font = SubResource( 8 )
+text = "Pular"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="pular" type="TouchScreenButton" parent="Control"]
+self_modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 4.29517, 155.296 )
+scale = Vector2( 65.2164, 6.55183 )
+normal = ExtResource( 8 )
+
+[node name="TimerNextLevel" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+[connection signal="pressed" from="CanvasLayer/HBoxContainer/close/close" to="." method="_on_close_pressed"]
+[connection signal="text_changed" from="Control/resposta" to="." method="_on_resposta_text_changed"]
+[connection signal="pressed" from="Control/btnCheck" to="." method="_on_btnCheck_pressed"]
+[connection signal="pressed" from="Control/pular" to="." method="_on_pular_pressed"]
+[connection signal="timeout" from="TimerNextLevel" to="." method="_on_TimerNextLevel_timeout"]
