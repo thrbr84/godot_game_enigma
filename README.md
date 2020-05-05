@@ -1,4 +1,4 @@
-# Godot - TBP_GrassPath2D
+# Godot - Game Enigma
 
 - Developed and tested on Godot 3.2
 - [Portuguese documentation](README_PT-BR.md)
